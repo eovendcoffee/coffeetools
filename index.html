@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Инструменты Кофейника — Главная</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #f5f5f5;
+    }
+    h1 {
+      margin-bottom: 40px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 30px;
+    }
+    .main-btn {
+      padding: 25px 50px;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 12px;
+      background: #3c2c19;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .main-btn:hover {
+      background: #704214;
+    }
+  </style>
+</head>
+<body>
+  <h1>Coffee Tools</h1>
+  <div class="btn-group">
+    <button class="main-btn" onclick="location.href='invent.html'">Инвентаризация</button>
+    <button class="main-btn" onclick="location.href='base.html'">База точек</button>
+  </div>
+</body>
+</html>
