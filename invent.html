@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофе. Инвентаризация</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/MullerBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/MullerMedium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+    <script src="https://cdn.jsdelivr.net/npm/exceljs@4.3.0/dist/exceljs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container main-wrap">
+        <header class="header">
+            <a class="logo">
+                <img src="img/logo.svg" alt="Логотип" width="30" height="33">
+            </a>
+            
+            <a class="roadmap" href="https://milkyway24.github.io/coffee/"
+                target="_blank"
+                style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; margin-left: auto;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/YandexNavigatorLogo.svg" alt="Yandex Navigator Logo" 
+                style="height: 30px; width: auto;">
+            <span style="font-size: 18px; color: #000;">Найти кофе точки</span>
+            </a>
+       
+        </header>
+        <h1 class="page-title">Кофе инвентаризация</h1>
+        <div style="height: 20px;"></div>
+        <div class="form-group">
+            <label for="inventoryDate">Дата инвентаризации:</label>
+            <input type="date" id="inventoryDate" class="input" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="routeNumber">Номер маршрута:</label>
+            <select id="routeNumber" class="input" required>
+                <option value="" disabled selected>Выберите маршрут</option>
+                <option value="1">Маршрут К1 (У840УЕ33)</option>
+                <option value="2">Маршрут К2 (У179УК33)</option>
+                <option value="3">Маршрут К3 (У493УК33)</option>
+                <option value="4">Маршрут К4 (Т372УХ33)</option>
+                <option value="5">Маршрут К5 (К645ХС33)</option>
+                <option value="6">Маршрут К6 (М906ХВ33)</option>
+                <option value="7">Маршрут К7 (М281ХО33)</option>
+                <option value="8">Маршрут К8 (М332ХТ33)</option>
+            </select>
+            <div id="routeNumberError" class="error-message">Пожалуйста, выберите маршрут</div>
+        </div>
+
+<div class="form-group" style="display: none;">
+    <input type="text" id="carNumber" class="input">
+</div>
+        
+        <div class="form-group">
+            <h3>Остатки продуктов в машине:</h3>
+            <table id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>Название продукта</th>
+                        <th>Количество</th>
+                    </tr>
+                </thead>
+                <tbody id="inventoryItems">
+                    <!-- Товары будут добавлены через JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <button id="downloadBtn" class="show-all">Скачать ведомость</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
