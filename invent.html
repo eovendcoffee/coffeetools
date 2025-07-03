@@ -15,66 +15,68 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
-    <nav>
-    <a href="index.html">На главную</a> |
-    <a href="base.html">База точек</a>
-  </nav>
+    <nav class="main-nav">
+        <a href="index.html">На главную</a> |
+        <a href="base.html">База точек</a>
+    </nav>
     <div class="container main-wrap">
         <header class="header">
             <a class="logo">
                 <img src="img/logo.svg" alt="Логотип" width="30" height="33">
             </a>
-            
-            <a class="roadmap" href="https://milkyway24.github.io/coffee/"
+            <!-- Если нужен roadmap, раскомментируй строку ниже -->
+            <!-- <a class="roadmap" href="https://milkyway24.github.io/coffee/"
                 target="_blank"
                 style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; margin-left: auto;">
-       
+                Дорожная карта
+            </a> -->
         </header>
         <h1 class="page-title">Кофе инвентаризация</h1>
         <div style="height: 20px;"></div>
-        <div class="form-group">
-            <label for="inventoryDate">Дата инвентаризации:</label>
-            <input type="date" id="inventoryDate" class="input" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="routeNumber">Номер маршрута:</label>
-            <select id="routeNumber" class="input" required>
-                <option value="" disabled selected>Выберите маршрут</option>
-                <option value="1">Маршрут К1 (У840УЕ33)</option>
-                <option value="2">Маршрут К2 (У179УК33)</option>
-                <option value="3">Маршрут К3 (У493УК33)</option>
-                <option value="4">Маршрут К4 (Т372УХ33)</option>
-                <option value="5">Маршрут К5 (К645ХС33)</option>
-                <option value="6">Маршрут К6 (М906ХВ33)</option>
-                <option value="7">Маршрут К7 (М281ХО33)</option>
-                <option value="8">Маршрут К8 (М332ХТ33)</option>
-            </select>
-            <div id="routeNumberError" class="error-message">Пожалуйста, выберите маршрут</div>
-        </div>
-
-<div class="form-group" style="display: none;">
-    <input type="text" id="carNumber" class="input">
-</div>
-        
-        <div class="form-group">
-            <h3>Остатки продуктов в машине:</h3>
-            <table id="inventoryTable">
-                <thead>
-                    <tr>
-                        <th>Название продукта</th>
-                        <th>Количество</th>
-                    </tr>
-                </thead>
-                <tbody id="inventoryItems">
-                    <!-- Товары будут добавлены через JavaScript -->
-                </tbody>
-            </table>
-        </div>
-        
-        <button id="downloadBtn" class="show-all">Скачать ведомость</button>
+        <form id="inventoryForm" autocomplete="off">
+            <div class="form-group">
+                <label for="inventoryDate">Дата инвентаризации:</label>
+                <input type="date" id="inventoryDate" class="input" required>
+            </div>
+            <div class="form-group">
+                <label for="routeNumber">Номер маршрута:</label>
+                <select id="routeNumber" class="input" required>
+                    <option value="" disabled selected>Выберите маршрут</option>
+                    <option value="1">К1 (У840УЕ33)</option>
+                    <option value="2">К2 (У179УК33)</option>
+                    <option value="3">К3 (У493УК33)</option>
+                    <option value="4">К4 (Т372УХ33)</option>
+                    <option value="5">К5 (К645ХС33)</option>
+                    <option value="6">К6 (М906ХВ33)</option>
+                    <option value="7">К7 (М281ХО33)</option>
+                    <option value="8">К8 (М332ХТ33)</option>
+                </select>
+                <div id="routeNumberError" class="error-message" style="display:none;">Пожалуйста, выберите маршрут</div>
+            </div>
+            <div class="form-group" style="display: none;">
+                <input type="text" id="carNumber" class="input">
+            </div>
+            <div class="form-group">
+                <h3>Остатки продуктов в машине:</h3>
+                <div class="table-wrap">
+                    <table id="inventoryTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Название продукта</th>
+                                <th>Количество</th>
+                            </tr>
+                        </thead>
+                        <tbody id="inventoryItems">
+                            <!-- Товары будут добавлены через JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="form-group" style="text-align:right;">
+                <button id="downloadBtn" class="show-all" type="button">Скачать ведомость</button>
+            </div>
+        </form>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
