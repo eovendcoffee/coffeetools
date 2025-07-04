@@ -1,4 +1,4 @@
-/* Основные стили */
+/* ====== БАЗОВЫЕ СТИЛИ ====== */
 body {
     font-family: "Muller", Arial, sans-serif;
     font-size: 16px;
@@ -10,18 +10,24 @@ body {
     padding: 20px;
 }
 
+h1 {
+    color: #cb3945;
+    font-size: 26px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* ====== КОНТЕЙНЕРЫ ====== */
 .container {
     max-width: 600px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
 .main-wrap {
     padding-top: 10px;
     padding-bottom: 40px;
     min-height: 100vh;
 }
-
 .header {
     display: flex;
     align-items: center;
@@ -30,33 +36,23 @@ body {
     padding-bottom: 15px;
     border-bottom: 1px dashed #969696;
 }
-
 .logo {
     display: flex;
     width: 30px;
     opacity: 0.8;
 }
 
-h1 {
-    color: #cb3945;
-    font-size: 26px;
-    line-height: 1.2;
-    margin: 0;
-}
-
-/* Стили формы */
+/* ====== ФОРМЫ ====== */
 .form-group {
     margin-bottom: 15px;
 }
-
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: 500;
     font-size: 14px;
 }
-
-.input {
+.input, select.input {
     width: 100%;
     height: 35px;
     padding: 5px 5px 3px;
@@ -65,85 +61,59 @@ label {
     transition: border-color 0.2s;
     outline: none;
 }
-
-.input:focus {
+.input:focus, select.input:focus {
     border-color: #867544;
 }
+select.input.error {
+    border: 1px solid #ff4d4d;
+    box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.2);
+}
+.error-message {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.error-message.visible {
+    display: block;
+    opacity: 1;
+}
 
-/* Общие стили таблицы */
+/* ====== ТАБЛИЦЫ ====== */
 #inventoryTable {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
-
 #inventoryTable th, #inventoryTable td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
-
 #inventoryTable th {
     background-color: #f2f2f2;
 }
-
-.non-editable {
-    background-color: #f0f0f0;
-    cursor: not-allowed;
+#inventoryTable td:first-child {
+    text-align: center;
+    vertical-align: middle;
 }
-/* Стили для мобильных устройств */
-@media (max-width: 768px) {
-    #inventoryTable {
-        display: table; /* Возвращаем табличное отображение */
-        width: 100%;
-    }
-
-    #inventoryTable thead {
-        display: table-header-group;
-    }
-
-    #inventoryTable tbody {
-        display: table-row-group;
-    }
-
-    #inventoryTable tr {
-        display: table-row;
-    }
-    #inventoryTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 15px 0;
-    }
-    /* Только названия продуктов по центру */
-    #inventoryTable td:first-child {
-        text-align: center;
-        vertical-align: middle;
-    }
-    #inventoryTable th {
-        background-color: #f5f5f5; /* Легкий фон для заголовков */
-        font-weight: bold;
-    }
-    /* Уменьшаем отступы на очень маленьких экранах */
-    @media (max-width: 480px) {
-        #inventoryTable th,
-        #inventoryTable td {
-            padding: 6px 8px;
-            font-size: 14px;
-        }
-    }
-}
-
-/* Стили для полей ввода */
 #inventoryTable input[type="number"] {
     width: 80px;
     padding: 6px;
     border: 1px solid #ddd;
     border-radius: 4px;
     text-align: center;
-    margin: 0 auto; /* Центрируем поле ввода в ячейке */
-    display: block; /* Чтобы сработал margin auto */
-} 
-/* Стили кнопки */
+    margin: 0 auto;
+    display: block;
+}
+.non-editable {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+/* ====== КНОПКИ ====== */
 .show-all {
     min-height: 35px;
     padding: 10px 15px;
@@ -157,154 +127,151 @@ label {
     outline: none;
     width: 100%;
 }
-
 .show-all:hover {
     background-color: #45a049;
 }
 
-.error-message {
-    color: #ff4d4d;
-    font-size: 14px;
-    margin-top: 5px;
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.error-message.visible {
-    display: block;
-    opacity: 1;
-}
-
-select.input.error {
-    border: 1px solid #ff4d4d;
-    box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.2);
-}
-/* Улучшение для полей ввода на мобильных устройствах */
-@media (max-width: 768px) {
-    #inventoryTable input[type="number"] {
-        font-size: 16px; /* Увеличиваем размер шрифта для мобильных */
-        padding: 10px;
-        min-height: 40px; /* Делаем поле больше для удобства касания */
-    }
-    
-    /* Дополнительный отступ снизу при открытой клавиатуре */
-    body.keyboard-visible {
-        padding-bottom: 300px;
-    }
-}
+/* ====== ГЛАВНАЯ: КАРТОЧКИ-КНОПКИ ====== */
 .btn-group {
-  display: flex;
-  gap: 36px;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
 .main-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #32200a;
-  background: linear-gradient(135deg, #f8f3ed 0%, #f7ece0 100%);
-  border-radius: 16px;
-  box-shadow: 0 2px 10px rgba(60,44,25,0.08);
-  padding: 32px 28px 22px 28px;
-  min-width: 170px;
-  min-height: 210px;
-  border: 1.5px solid #ead9bb;
-  transition: box-shadow 0.18s, transform 0.18s, border 0.18s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #32200a;
+    background: linear-gradient(135deg, #f8f3ed 0%, #f7ece0 100%);
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(60,44,25,0.08);
+    padding: 32px 28px 22px 28px;
+    min-width: 170px;
+    min-height: 210px;
+    border: 1.5px solid #ead9bb;
+    transition: box-shadow 0.18s, transform 0.18s, border 0.18s;
 }
-
 .main-link:hover,
 .main-link:focus {
-  box-shadow: 0 8px 38px rgba(60,44,25,0.17);
-  transform: translateY(-4px) scale(1.045);
-  border-color: #d3be90;
+    box-shadow: 0 8px 38px rgba(60,44,25,0.17);
+    transform: translateY(-4px) scale(1.045);
+    border-color: #d3be90;
 }
-
 .main-link:active {
-  transform: scale(0.97);
+    transform: scale(0.97);
 }
-
 .main-img {
-  width: 115px;
-  height: 115px;
-  margin-bottom: 18px;
-  border-radius: 12px;
-  background: #fff;
-  object-fit: contain;
-  transition: box-shadow 0.18s, transform 0.18s;
+    width: 115px;
+    height: 115px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background: #fff;
+    object-fit: contain;
+    transition: box-shadow 0.18s, transform 0.18s;
+}
+.main-title {
+    font-size: 1.16rem;
+    font-weight: 500;
+    background: none;
+    border-radius: 8px;
+    padding: 8px 0 0 0;
+    margin-top: 0;
+    user-select: none;
 }
 
-.main-title {
-  font-size: 1.16rem;
-  font-weight: 500;
-  background: none;
-  border-radius: 8px;
-  padding: 8px 0 0 0;
-  margin-top: 0;
-  user-select: none;
-}
+/* ====== НАВИГАЦИЯ ====== */
 .nav-links {
-  display: flex;
-  gap: 22px;
-  justify-content: center;
-  margin: 26px 0 30px 0;
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    margin: 26px 0 30px 0;
 }
 .nav-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #fff7ee;
-  color: #3c2c19;
-  font-size: 1.09rem;
-  font-weight: 500;
-  border-radius: 10px;
-  border: 1.2px solid #edd7b8;
-  box-shadow: 0 2px 8px rgba(80,60,20,0.08);
-  padding: 11px 20px;
-  text-decoration: none;
-  transition: background 0.16s, box-shadow 0.16s, border-color 0.16s, transform 0.13s;
-  cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff7ee;
+    color: #3c2c19;
+    font-size: 1.09rem;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 1.2px solid #edd7b8;
+    box-shadow: 0 2px 8px rgba(80,60,20,0.08);
+    padding: 11px 20px;
+    text-decoration: none;
+    transition: background 0.16s, box-shadow 0.16s, border-color 0.16s, transform 0.13s;
+    cursor: pointer;
 }
 .nav-btn:hover, .nav-btn:focus {
-  background: #ffe7c2;
-  box-shadow: 0 6px 16px rgba(60,44,25,0.12);
-  border-color: #e2c590;
-  transform: translateY(-2px) scale(1.04);
-  color: #2a1801;
-  text-decoration: none;
+    background: #ffe7c2;
+    box-shadow: 0 6px 16px rgba(60,44,25,0.12);
+    border-color: #e2c590;
+    transform: translateY(-2px) scale(1.04);
+    color: #2a1801;
+    text-decoration: none;
 }
 .nav-icon {
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
-  border-radius: 6px;
-  background: #fff;
-  margin-right: 3px;
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #fff;
+    margin-right: 3px;
+}
+
+/* ====== АДАПТИВ ====== */
+@media (max-width: 768px) {
+    #inventoryTable {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+    }
+    #inventoryTable thead { display: table-header-group; }
+    #inventoryTable tbody { display: table-row-group; }
+    #inventoryTable tr { display: table-row; }
+    #inventoryTable th {
+        background-color: #f5f5f5;
+        font-weight: bold;
+    }
+    #inventoryTable th, #inventoryTable td {
+        padding: 8px;
+        font-size: 15px;
+    }
+    #inventoryTable input[type="number"] {
+        font-size: 16px;
+        padding: 10px;
+        min-height: 40px;
+    }
+    body.keyboard-visible { padding-bottom: 300px; }
 }
 @media (max-width: 600px) {
-  .btn-group {
-    flex-direction: column;
-    gap: 22px;
-    width: 100%;
-    align-items: center;
-  }
-  .main-link, .main-btn {
-    min-width: 80vw;
-    font-size: 1.25rem;
-    padding: 22px 0 !important;
-  }
-  .main-img {
-    width: 80px !important;
-    height: 80px !important;
-  }
-  .main-title {
-    font-size: 1.13rem !important;
-    padding: 10px 0 !important;
-  }
-  h1 {
-    font-size: 1.5rem;
-  }
+    .btn-group {
+        flex-direction: column;
+        gap: 22px;
+        width: 100%;
+        align-items: center;
+    }
+    .main-link, .main-btn {
+        min-width: 80vw;
+        font-size: 1.25rem;
+        padding: 22px 0 !important;
+    }
+    .main-img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    .main-title {
+        font-size: 1.13rem !important;
+        padding: 10px 0 !important;
+    }
+    h1 { font-size: 1.5rem; }
+}
+@media (max-width: 480px) {
+    #inventoryTable th, #inventoryTable td {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
 }
