@@ -284,3 +284,27 @@ select.input.error {
   background: #fff;
   margin-right: 3px;
 }
+@media (max-width: 600px) {
+  .btn-group {
+    flex-direction: column;
+    gap: 22px;
+    width: 100%;
+    align-items: center;
+  }
+  .main-link, .main-btn {
+    min-width: 80vw;
+    font-size: 1.25rem;
+    padding: 22px 0 !important;
+  }
+  .main-img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .main-title {
+    font-size: 1.13rem !important;
+    padding: 10px 0 !important;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
