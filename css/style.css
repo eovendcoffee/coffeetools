@@ -41,7 +41,18 @@ h1 {
     width: 30px;
     opacity: 0.8;
 }
-
+.site-footer {
+  margin-top: 64px;
+  color: #131313;
+  font-size: 1.02rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  font-family: 'Muller', Arial, sans-serif;
+  opacity: 0.60;
+  font-weight: 500;
+  padding-bottom: 18px;
+  user-select: none;
+}
 /* ====== ФОРМЫ ====== */
 .form-group {
     margin-bottom: 15px;
