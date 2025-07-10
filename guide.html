@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=600, initial-scale=1.0">
+  <title>Учебные материалы</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/MullerBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/MullerMedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <style>
+    .materials-list {margin-top:36px;}
+    .material-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(60,44,25,0.07);
+      margin-bottom: 14px;
+      padding: 0;
+      overflow: hidden;
+      transition: box-shadow 0.18s;
+    }
+    .material-title {
+      font-size: 1.14rem;
+      font-weight: 500;
+      background: #f5e7d8;
+      color: #cb3945;
+      padding: 18px 22px 18px 20px;
+      cursor: pointer;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.15s;
+      border: none;
+      width: 100%;
+      text-align: left;
+    }
+    .material-title:hover, .material-title:focus {
+      background: #f9d7c9;
+    }
+    .material-arrow {
+      margin-left: 14px;
+      font-size: 1.2em;
+      transition: transform 0.18s;
+    }
+    .material-card.open .material-arrow {
+      transform: rotate(90deg);
+    }
+    .material-content {
+      display: none;
+      padding: 22px 22px 18px 20px;
+      font-size: 1.04rem;
+      background: #fff;
+      animation: fadeIn 0.35s;
+    }
+    .material-card.open .material-content {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-8px);}
+      to { opacity: 1; transform: none;}
+    }
+    @media (max-width: 600px) {
+      .materials-list {margin-top:22px;}
+      .material-title, .material-content {padding-left: 7vw; padding-right: 7vw;}
+      .material-title {font-size: 1rem;}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav-links">
+    <a href="index.html" class="nav-btn">
+      <img src="img/home.png" alt="Главная" class="nav-icon">На главную
+    </a>
+  </nav>
+  <div class="container main-wrap">
+    <header class="header">
+      <a class="logo" href="index.html" title="На главную">
+        <!-- Вставьте ваш SVG логотип сюда -->
+        <svg width="30" height="33" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- ...ваш путь логотипа... -->
+        </svg>
+      </a>
+      <span class="header-operator">Единый оператор</span>
+      <a class="how-work"
+        href="https://rutube.ru/video/private/bd8b0cf9cf55935d789b9cd87a432eaa/?r=wd&p=vVD6oShyy-u8dAP588-37Q"
+        target="_blank">
+        <span class="info-icon">
+          <svg width="17" height="17" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- ...ваш путь info... -->
+          </svg>
+        </span>Как это работает?
+      </a>
+    </header>
+    <h1 class="page-title">Учебные материалы</h1>
+
+    <!-- Поисковая строка -->
+    <div class="inputs-wrap" style="margin-bottom: 10px;">
+      <label class="input-wrap" style="grid-column: 1 / span 3;">
+        <span class="input-label">Поиск по статьям</span>
+        <input type="text" class="input js-material-search" placeholder="Введите название или часть названия...">
+      </label>
+    </div>
+
+    <!-- Список материалов -->
+    <div class="materials-list js-materials-list">
+      <!-- Примеры материалов (замените на свои данные) -->
+      <div class="material-card" data-title="Видео: Как приготовить эспрессо">
+        <button class="material-title">
+          Видео: Как приготовить эспрессо
+          <span class="material-arrow">&#9654;</span>
+        </button>
+        <div class="material-content">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/5i8C_wkZsE4" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+          <p>Краткая инструкция и видео о правилах приготовления классического эспрессо.</p>
+        </div>
+      </div>
+      <div class="material-card" data-title="Фото: Виды кофейных зерен">
+        <button class="material-title">
+          Фото: Виды кофейных зерен
+          <span class="material-arrow">&#9654;</span>
+        </button>
+        <div class="material-content">
+          <img src="img/beans.jpg" alt="Виды кофейных зерен" style="max-width:320px; border-radius:8px;">
+          <p>Примеры популярных сортов кофейных зерен и их отличия.</p>
+        </div>
+      </div>
+      <div class="material-card" data-title="Текст: Гид по молоку для капучино">
+        <button class="material-title">
+          Текст: Гид по молоку для капучино
+          <span class="material-arrow">&#9654;</span>
+        </button>
+        <div class="material-content">
+          <p>Узнайте, как выбрать молоко для идеального капучино, как взбивать и какие бывают ошибки.</p>
+          <ul>
+            <li>Жирность молока и текстура пены</li>
+            <li>Температура нагрева</li>
+            <li>Типы молочных альтернатив</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Добавьте больше .material-card по шаблону -->
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    By Kononov A. &amp; Joldybaev S.
+  </footer>
+  <script>
+    // Поиск по названиям материалов
+    const searchInput = document.querySelector('.js-material-search');
+    const materialCards = Array.from(document.querySelectorAll('.material-card'));
+    searchInput.addEventListener('input', function() {
+      const value = this.value.trim().toLowerCase();
+      materialCards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        if(title.includes(value)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Аккордеон раскрытия/закрытия
+    document.querySelectorAll('.material-title').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const card = this.closest('.material-card');
+        const alreadyOpen = card.classList.contains('open');
+        // Сначала закрываем все
+        document.querySelectorAll('.material-card.open').forEach(openCard => openCard.classList.remove('open'));
+        if(!alreadyOpen) card.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>
