@@ -117,7 +117,16 @@ body {
   width: 30px;
   opacity: 0.8;
 }
-
+.header-operator {
+  font-size: 1.01rem;
+  font-weight: 500;
+  color: #cb3945;
+  margin-left: 10px;
+  margin-right: auto;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  align-self: center;
+}
 /* ====== ЗАГОЛОВКИ ====== */
 h1, .page-title, .main-center-title {
   color: #cb3945;
