@@ -126,6 +126,18 @@ export const stations = [
         drive: 'https://yandex.ru/maps/-/CHvruUz5'
     },
     {
+        name: 'Гормост Пешеходный мост «Андреевский» (конструкция 1)',
+        number: '3540',
+        // place: '',
+        // descr: ''
+    },
+    {
+        name: 'Гормост Пешеходный мост «Андреевский» (конструкция 2)',
+        number: '3523',
+        // place: '',
+        // descr: ''
+    },
+    {
         name: 'Аннино',
         number: '2491',
         place: 'https://yandex.ru/maps/-/CHrdq89o',
@@ -190,6 +202,13 @@ export const stations = [
         place: 'https://yandex.ru/navi/-/CHfdiE-a',
         parking: 'https://yandex.ru/navi/-/CHfdiU0D',
         descr: 'Закрывается в 2:00. Рядом есть платная парковка'
+    },
+    {
+        name: 'Белорусская',
+        number: '3547',
+        // place: 'https://yandex.ru/navi/-/CHfdiE-a',
+        // parking: 'https://yandex.ru/navi/-/CHfdiU0D',
+        // descr: 'Закрывается в 2:00. Рядом есть платная парковка'
     },
     {
         name: 'Беляево',
@@ -640,6 +659,11 @@ export const stations = [
         place: 'https://yandex.ru/navi/-/CHcRn8Pr',
     },
     {
+        name: 'Каширская',
+        number: '3545',
+        place: 'https://yandex.ru/maps/-/CHsBVEmD',
+    },
+    {
         name: 'Киевская',
         number: '2437',
         place: 'https://yandex.ru/maps/-/CHGBnYoc',
@@ -926,6 +950,11 @@ export const stations = [
         name: 'Люблино',
         number: '2236',
         place: 'https://yandex.ru/maps/-/CHrliL5g',
+    },
+    {
+        name: 'Манежная площадь',
+        number: '3539',
+        place: 'https://yandex.ru/navi/-/CHsZU0LM',
     },
     {
         name: 'Марксистская',
@@ -1350,6 +1379,12 @@ export const stations = [
         place: 'https://yandex.ru/navi/-/CHrhEPZq'
     },
     {
+        name: 'Орехово',
+        number: '3537',
+        place: 'https://yandex.ru/navi/-/CHszu-Kk',
+        descr: 'Нужен ключ от конструкции'
+    },
+    {
         name: 'Отрадное',
         number: '2159',
         place: 'https://yandex.ru/maps/-/CHr-zD04',
@@ -1462,6 +1497,12 @@ export const stations = [
         place: 'https://yandex.ru/maps/-/CHrleV~q',
     },
     {
+        name: 'Площадь Победы',
+        number: '3541',
+        place: 'https://yandex.ru/navi/-/CHsZYGlM',
+        descr: 'Заходить через выход 1 и перейти ближе к выходу 5'
+    },
+    {
         name: 'Полежаевская',
         number: '2792',
         place: 'https://yandex.ru/maps/-/CHvrzE9g',
@@ -1491,6 +1532,11 @@ export const stations = [
         name: 'Пражская',
         number: '2153',
         place: 'https://yandex.ru/maps/-/CHCIUZ~P',
+    },
+    {
+        name: 'Пражская',
+        number: '3535',
+        place: 'https://yandex.ru/navi/-/CHsdRTzO',
     },
     {
         name: 'Преображенская площадь',
@@ -1541,7 +1587,13 @@ export const stations = [
         place: 'https://yandex.ru/maps/-/CHrdAV4j',
         drive: 'https://yandex.ru/maps/-/CHrdA6Z9',
         parking: 'https://yandex.ru/maps/-/CHrdAS1M',
-        descr: 'Заезд там где низкий бордюр. Если рядом ДПС или в праздники много народу, можно встать на платной парковке и пройтись'
+        descr: 'Стоит в одном переходе с аппаратом 3534. Заезд там где низкий бордюр. Если рядом ДПС или в праздники много народу, можно встать на платной парковке и пройтись'
+    },
+    {
+        name: ' Гормост Пушкинский, Армения (конструкция 1)',
+        number: '3534',
+        place: 'https://yandex.ru/navi/-/CHssEQNK',
+        descr: 'Стоит в одном переходе с аппаратом Пушкинская 2187, если что можно заехать там и пройтись по переходу'
     },
     {
         name: 'Пыхтино',
@@ -1612,6 +1664,12 @@ export const stations = [
         number: '2211',
         place: 'https://yandex.ru/maps/-/CHvIeTzs',
         descr: 'Заезжать через шлагбаум на парковку, там бесплатно первые 2 часа. Обслужить до 22:00, потом парковка закрывается'
+    },
+    {
+        name: 'Рязанский проспект',
+        number: '3544',
+        place: 'https://yandex.ru/maps/-/CHszFK0S',
+        descr: 'Взять ключ от антивандальной конструкции'
     },
     {
         name: 'Савеловская',
@@ -1700,7 +1758,7 @@ export const stations = [
         place: 'https://yandex.ru/maps/-/CHvMrON7',
         drive: 'https://yandex.ru/maps/-/CHvC5B6A',
         parking: 'https://yandex.ru/maps/-/CHvMrCIa',
-        descr: 'Парковаться в кармане, точка указана в столбце "парковка". Пройти ко входу автовокзала (указано в столбце "вход"). Телегу через рамку досмотра не провозить, только через выход'
+        descr: 'Парковаться в кармане, точка указана в столбце "парковка". Пройти ко входу автовокзала (указано в столбце "вход"). Телегу через рамку досмотра не провозить, только через выход. Есть туалет'
     },
     {
         name: 'Селигерская',
@@ -1724,6 +1782,12 @@ export const stations = [
         number: '3501',
         place: 'https://yandex.ru/navi/-/CHrhIGMU',
         descr: 'Выход 1. Взять ключ от конструкции'
+    },
+    {
+        name: 'Скобелевская',
+        number: '3548',
+        // place: '',
+        // descr: ''
     },
     {
         name: 'Славянский бульвар',
@@ -1912,6 +1976,11 @@ export const stations = [
         place: 'https://yandex.ru/maps/-/CHvr7AKS',
     },
     {
+        name: 'Терехово',
+        number: '3546',
+        // place: 'https://yandex.ru/maps/-/CHvr7AKS',
+    },
+    {
         name: 'Технопарк',
         number: '2728',
         place: 'https://yandex.ru/maps/-/CHrdFEja',
@@ -2038,7 +2107,7 @@ export const stations = [
         place: 'https://yandex.ru/maps/-/CHvMz827',
         drive: 'https://yandex.ru/maps/-/CHvC5B6A',
         parking: 'https://yandex.ru/maps/-/CHvMrCIa',
-        descr: 'Закрывается в 2:00. В одном переходе с 2441. Парковаться в кармане, точка указана в столбце "парковка". Рядом лифт'
+        descr: 'Закрывается в 2:00. В одном переходе с 2126. Парковаться в кармане, точка указана в столбце "парковка". Рядом лифт'
     },
     {
         name: 'Ховрино',
