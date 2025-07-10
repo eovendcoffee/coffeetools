@@ -118,10 +118,10 @@ body {
   opacity: 0.8;
 }
 .header-operator {
-  font-size: 1.01rem;
+  font-size: 26px;
   font-weight: 500;
   color: #cb3945;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-right: auto;
   letter-spacing: 0.01em;
   white-space: nowrap;
