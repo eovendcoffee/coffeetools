@@ -269,31 +269,32 @@ select.input.error {
 
   /* Шапка */
   .header {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding-bottom: 10px;
+    align-items: center;
+    padding-bottom: 12px;
   }
 
   .logo {
-    width: 25px;
+    width: 32px;
+    height: auto;
     order: 1;
+    margin-right: 8px;
   }
 
   .header-operator {
     font-size: 1.2rem;
-    margin-left: 0;
     order: 2;
-    flex: 1;
-    text-align: center;
-    white-space: normal;
+    flex: 0 1 auto; 
+    margin-left: 0;
+    white-space: nowrap;
+    padding-top: 2px;
   }
 
   .how-work {
     order: 3;
     width: 100%;
-    justify-content: center;
-    margin-top: 5px;
-    font-size: 0.85rem;
+    margin-top: 8px;
+    justify-content: flex-start; /* Выравнивание по левому краю */
+    padding-left: 40px; /* Отступ для выравнивания с текстом */
   }
 
   .info-icon {
