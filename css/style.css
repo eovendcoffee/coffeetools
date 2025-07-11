@@ -269,8 +269,8 @@ select.input.error {
 
   /* Шапка */
   .header {
-    align-items: center;
-    padding-bottom: 12px;
+    flex-wrap: wrap;
+    row-gap: 8px;
   }
 
   .logo {
@@ -290,11 +290,12 @@ select.input.error {
   }
 
   .how-work {
-    order: 3;
     width: 100%;
-    margin-top: 8px;
-    justify-content: flex-start; /* Выравнивание по левому краю */
-    padding-left: 40px; /* Отступ для выравнивания с текстом */
+    margin-top: 0;
+    order: 1; 
+    justify-content: flex-start; 
+    padding-left: 38px; 
+    font-size: 0.85rem;
   }
 
   .info-icon {
