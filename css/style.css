@@ -586,6 +586,15 @@ select.input.error {
     padding: 10px 0 !important;
   }
   h1, .page-title { font-size: 1.5rem; }
+  .nav-btn {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+  
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 480px) {
