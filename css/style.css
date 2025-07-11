@@ -259,7 +259,82 @@ select.input.error {
 .form-group {
   margin-bottom: 15px;
 }
+/* ====== МОБИЛЬНЫЕ ИСПРАВЛЕНИЯ ДЛЯ BASE.HTML ====== */
+@media (max-width: 600px) {
+  /* Фикс горизонтального скролла */
+  body {
+    overflow-x: hidden;
+    padding: 15px;
+  }
 
+  /* Шапка */
+  .header {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .logo {
+    width: 25px;
+    order: 1;
+  }
+
+  .header-operator {
+    font-size: 1.2rem;
+    margin-left: 0;
+    order: 2;
+    flex: 1;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .how-work {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 0.85rem;
+  }
+
+  .info-icon {
+    margin-right: 3px;
+  }
+
+  /* Навигационные кнопки */
+  .nav-links {
+    flex-direction: column;
+    gap: 8px;
+    margin: 15px 0;
+  }
+
+  .nav-btn {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    min-height: auto;
+    white-space: nowrap;
+  }
+
+  .nav-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Основной контент */
+  .page-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .inputs-wrap {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .show-all {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
 /* ====== ПЛЕЙСЫ/СПИСОК ====== */
 .places {
   padding-top: 30px;
